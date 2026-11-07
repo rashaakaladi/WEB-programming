@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Functions</title>
+
+    <style>
+        body {
+            background-color: lightyellow;
+            font-family: Arial;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkred;
+        }
+
+        h2 {
+            color: midnightblue;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>JavaScript Math and String Functions</h1>
+
+<h2>JavaScript String Object</h2>
+
+<script>
+
+let str = prompt("Enter a String:");
+
+let oldWord = prompt("Enter word to replace:");
+let newWord = prompt("Enter replacement word:");
+
+document.write("1. Original String: " + str + "<br><br>");
+document.write("2. Length: " + str.length + "<br><br>");
+document.write("3. Uppercase: " + str.toUpperCase() + "<br><br>");
+document.write("4. Lowercase: " + str.toLowerCase() + "<br><br>");
+document.write("5. Character at 0: " + str.charAt(0) + "<br><br>");
+document.write("6. Position of Java: " + str.indexOf("Java") + "<br><br>");
+document.write("7. Slice: " + str.slice(0, 5) + "<br><br>");
+document.write("8. Replace: " + str.replace(oldWord, newWord) + "<br><br>");
+document.write("9. Concatenation: " + str.concat(" ", newWord) + "<br><br>");
+
+</script>
+
+<h2>JavaScript Math Object</h2>
+
+<script>
+
+let numbers = [];
+
+let count = Number(prompt("How many numbers?"));
+
+for (let i = 0; i < count; i++) {
+    numbers[i] = Number(prompt("Enter Number " + (i + 1)));
+}
+
+let num = numbers[0];
+
+let power = Number(prompt("Enter Power:"));
+
+document.write("1. Original Number: " + num + "<br><br>");
+document.write("2. Round: " + Math.round(num) + "<br><br>");
+document.write("3. Floor: " + Math.floor(num) + "<br><br>");
+document.write("4. Ceil: " + Math.ceil(num) + "<br><br>");
+document.write("5. Square Root: " + Math.sqrt(num) + "<br><br>");
+document.write("6. Power: " + Math.pow(num, power) + "<br><br>");
+document.write("7. Absolute: " + Math.abs(num) + "<br><br>");
+document.write("8. Maximum: " + Math.max(...numbers) + "<br><br>");
+document.write("9. Minimum: " + Math.min(...numbers) + "<br><br>");
+
+</script>
+
+</body>
+</html>
+
