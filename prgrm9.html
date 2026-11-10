@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Background Color Change</title>
+
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Change Background Color</h1>
+
+<button onclick="changeColor()">Click Me</button>
+
+<script>
+let colors = ["red", "yellow", "lightblue", "lightgreen", "pink", "midnightblue", "violet"];
+let i = 0;
+
+function changeColor() {
+    document.body.style.backgroundColor = colors[i];
+
+    i++;
+
+    if (i == colors.length) {
+        i = 0;
+    }
+}
+</script>
+
+</body>
+</html>
