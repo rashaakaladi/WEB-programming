@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mouse Event</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #FCE4EC;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.container {
+    background: white;
+    width: 350px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+h2 {
+    color: #880E4F;
+}
+
+img {
+    width: 250px;
+    height: 200px;
+    border-radius: 15px;
+    margin-top: 15px;
+    object-fit: cover;
+}
+
+h3 {
+    color: #AD1457;
+    margin-top: 20px;
+}
+
+p {
+    color: #777;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Mouse Over Event</h2>
+
+<p>Move your mouse over the image!</p>
+
+<img id="myimage" src="/home/ksb/Rasha/image1.jpeg"
+onmouseover="changeContent()"
+onmouseout="restoreContent()">
+
+<h3 id="text">This is the Original Image</h3>
+
+</div>
+
+<script>
+
+function changeContent() {
+    document.getElementById("myimage").src = "/home/ksb/Rasha/image2.jpeg";
+
+    document.getElementById("text").innerHTML =
+    "This is the New Image";
+}
+
+function restoreContent() {
+    document.getElementById("myimage").src = "/home/ksb/Rasha/image1.jpeg";
+
+    document.getElementById("text").innerHTML =
+    "This is the Original Image";
+}
+
+</script>
+
+</body>
+</html>
