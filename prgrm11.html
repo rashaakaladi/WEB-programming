@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Exam</title>
+<style>
+body {
+    font-family: Arial;
+    background-color: #FCE4EC;
+}
+.container {
+    width: 500px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+h2 {
+    text-align: center;
+    color: #AD1457;
+}
+.question {
+    margin-top: 20px;
+    font-weight: bold;
+}
+input[type="radio"] {
+    margin: 8px;
+}
+input[type="button"] {
+    background-color:#AD1457;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="button"]:hover {
+    background-color: #6b0934;
+}
+#result {
+    color: #6b0934;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Online Examination</h2>
+<form id="quiz">
+<p class="question">
+1. Which language is used for web development?
+</p>
+<input type="radio" name="q1" value="a"> Python<br>
+<input type="radio" name="q1" value="b"> HTML<br>
+<input type="radio" name="q1" value="c"> C<br>
+<p class="question">
+2. Which tag is used for JavaScript?
+</p>
+<input type="radio" name="q2" value="a"> script<br>
+<input type="radio" name="q2" value="b"> style<br>
+<input type="radio" name="q2" value="c"> body<br>
+<p class="question">
+3. Which keyword is used to declare a variable?
+</p>
+<input type="radio" name="q3" value="a"> print<br>
+<input type="radio" name="q3" value="b"> let<br>
+<input type="radio" name="q3" value="c"> write<br><br>
+<center>
+<input type="button" value="Submit Exam"
+onclick="checkAnswers()">
+</center>
+</form>
+<h3 id="result"></h3>
+</div>
+<script>
+function checkAnswers() {
+    let score = 0;
+    let q1 = document.querySelector(
+    'input[name="q1"]:checked');
+    let q2 = document.querySelector(
+    'input[name="q2"]:checked');
+    let q3 = document.querySelector(
+    'input[name="q3"]:checked');
+    if (q1 && q1.value == "b") {
+        score++;
+    }
+    if (q2 && q2.value == "a") {
+        score++;
+    }
+    if (q3 && q3.value == "b") {
+        score++;
+    }
+    document.getElementById("result").innerHTML =
+    "Your Score: " + score + " / 3";
+}
+</script>
+</body>
+</html>
